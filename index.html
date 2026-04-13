@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Helper Guide · Aadhaar Update & Official Links</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      background: #f5f9fc;
+      color: #1a2e3b;
+      line-height: 1.5;
+      padding: 20px 16px 32px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 20, 30, 0.04), 0 4px 8px rgba(0, 0, 0, 0.02);
+      padding: 28px 24px 36px;
+      border: 1px solid #e3edf2;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 8px;
+      color: #0a3847;
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 32px 0 18px;
+      color: #1d4e5f;
+      border-left: 6px solid #2a8b7a;
+      padding-left: 18px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      color: #1c4d58;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e1f0ec;
+      color: #1a6658;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 4px 14px;
+      border-radius: 40px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .trust-note {
+      background: #ecf5f9;
+      padding: 16px 22px;
+      border-radius: 24px;
+      margin: 22px 0 18px;
+      font-size: 1rem;
+      color: #1a4e62;
+      border: 1px solid #cde0e9;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+      margin: 26px 0 12px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #dde9f0;
+      border-radius: 24px;
+      padding: 20px 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.02);
+      transition: all 0.15s;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 12px;
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 40px;
+      background: #f2f7fb;
+    }
+
+    .status.available {
+      background: #dff0d8;
+      color: #236b4c;
+    }
+
+    .status.coming {
+      background: #fff1dd;
+      color: #b1651a;
+    }
+
+    .guide-step {
+      background: #fafdff;
+      padding: 22px 20px;
+      border-radius: 22px;
+      margin: 24px 0;
+      border: 1px solid #d7e6f0;
+    }
+
+    .step-item {
+      margin-bottom: 18px;
+      padding-left: 32px;
+      position: relative;
+    }
+
+    .step-item:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1e7e6c;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    .doc-list, .problem-list {
+      list-style: none;
+      padding-left: 6px;
+    }
+
+    .doc-list li, .problem-list li {
+      padding: 10px 0 10px 32px;
+      position: relative;
+      border-bottom: 1px dashed #cbdae3;
+    }
+
+    .doc-list li:before {
+      content: "📄";
+      position: absolute;
+      left: 0;
+      color: #3b7387;
+    }
+
+    .problem-list li:before {
+      content: "❓";
+      position: absolute;
+      left: 0;
+    }
+
+    .update-date {
+      margin-top: 24px;
+      font-size: 0.95rem;
+      color: #3e6b7c;
+      background: #eef4f8;
+      padding: 8px 18px;
+      border-radius: 40px;
+      display: inline-block;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.15rem;
+      gap: 12px;
+      margin: 24px 0 12px;
+      border: none;
+      box-shadow: 0 6px 12px rgba(37, 211, 102, 0.18);
+      transition: background 0.15s;
+    }
+
+    .whatsapp-btn i {
+      font-size: 1.5rem;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1fad50;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      padding: 14px 20px;
+      margin-bottom: 12px;
+      border: 1px solid #deecf3;
+    }
+
+    .faq-question {
+      font-weight: 650;
+      color: #0f4457;
+      margin-bottom: 8px;
+    }
+
+    .map-container {
+      border-radius: 24px;
+      overflow: hidden;
+      margin: 18px 0;
+      border: 1px solid #cbdde9;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 2px solid #d5e4ed;
+      font-size: 0.95rem;
+      color: #3d6a7c;
+      text-align: center;
+    }
+
+    .official-link-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 25px 0 10px;
+    }
+
+    .official-card {
+      background: #f1f8fc;
+      border-radius: 22px;
+      padding: 18px 22px;
+      flex: 1 1 180px;
+      border: 1px solid #c7dee9;
+      transition: 0.1s;
+    }
+
+    .official-card i {
+      color: #1b6f87;
+      margin-right: 8px;
+    }
+
+    .official-card a {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #0c4a5e;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 6px 0 4px;
+    }
+
+    .official-card a:hover {
+      text-decoration: underline;
+      color: #054552;
+    }
+
+    .important-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+      margin: 16px 0 22px;
+    }
+
+    .important-links a {
+      color: #1b6b87;
+      text-decoration: none;
+      border-bottom: 1.5px dotted #7fb3c5;
+      font-weight: 500;
+    }
+
+    button {
+      background: #1f6e5c;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.1s;
+      border: 1px solid #175b4b;
+    }
+
+    button:hover {
+      background: #165a4a;
+    }
+
+    input, select {
+      padding: 12px 18px;
+      border-radius: 50px;
+      border: 1.5px solid #c2dae6;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 300px;
+      background: white;
+    }
+
+    .tool-box {
+      background: #f3fafd;
+      border-radius: 28px;
+      padding: 26px 24px;
+      margin: 28px 0;
+    }
+
+    .inline-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .official-badge {
+      background: #e2eef6;
+      color: #104f67;
+      font-size: 0.85rem;
+      padding: 4px 16px;
+      border-radius: 40px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #d7e6ef;
+      margin: 36px 0 16px;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 20px 16px; }
+      h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  
+  <!-- Header + Trust -->
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    <h1>📋 Aadhaar Update Guide <span style="font-size: 1rem; background: #e6f2f0; padding: 5px 16px; border-radius: 40px; margin-left: 10px;">Simple English</span></h1>
+    <span class="official-badge"><i class="far fa-calendar-check"></i> Updated regularly</span>
+  </div>
+  <p style="font-size: 1.2rem; color: #1e586d; margin-bottom: 8px;">Step‑by‑step guides, document checklists, and official links — all in plain language.</p>
+  <div class="trust-note">
+    <i class="fas fa-shield-alt" style="margin-right: 12px; color: #1a7a64;"></i> 
+    <strong>Honest & trustworthy:</strong> This website is updated often. Information is simplified for easy understanding. No fake claims.
+  </div>
+
+  <!-- 3 BASIC OFFICIAL PAGES (Aadhar, PAN, Labour) – prominent, smooth cards -->
+  <h2 style="margin-top: 20px;">🔗 Official Services (open in new tab)</h2>
+  <div class="official-link-cards">
+    <div class="official-card">
+      <i class="fas fa-id-card fa-lg"></i>
+      <a href="https://uidai.gov.in/" target="_blank" rel="noopener noreferrer">Aadhaar Services <i class="fas fa-external-link-alt" style="font-size:0.9rem;"></i></a>
+      <p style="margin-top: 6px; font-size:0.9rem; color:#2b5f71;">UIDAI official portal — update, download, verify.</p>
+    </div>
+    <div class="official-card">
+      <i class="fas fa-credit-card"></i>
+      <a href="https://www.onlineservices.nsdl.com/" target="_blank" rel="noopener noreferrer">PAN Services <i class="fas fa-external-link-alt"></i></a>
+      <p style="margin-top: 6px; font-size:0.9rem; color:#2b5f71;">NSDL e‑Gov — apply for new PAN, corrections.</p>
+    </div>
+    <div class="official-card">
+      <i class="fas fa-briefcase"></i>
+      <a href="https://nrega.nic.in/" target="_blank" rel="noopener noreferrer">NREGA / Job Card <i class="fas fa-external-link-alt"></i></a>
+      <p style="margin-top: 6px; font-size:0.9rem; color:#2b5f71;">Mahatma Gandhi NREGA — job card, muster roll.</p>
+    </div>
+  </div>
+  <p style="color: #386f82; margin-bottom: 20px;"><i class="fas fa-info-circle"></i> All official links open in a new tab. We only link to authentic government websites.</p>
+
+  <!-- Services section (working / coming soon) -->
+  <h2>🧰 Our Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>📇 Aadhaar Update <i class="fas fa-check-circle" style="color:#1f8b6e;"></i></h3>
+      <p>Online/offline complete process</p>
+      <span class="status available"><i class="fas fa-check"></i> Available Now ✅</span>
+    </div>
+    <div class="service-card">
+      <h3>🧾 Eligibility Checker</h3>
+      <p>Scholarship / pension eligibility</p>
+      <span class="status available"><i class="fas fa-check"></i> Available Now ✅</span>
+    </div>
+    <div class="service-card">
+      <h3>📄 Document Checklist</h3>
+      <p>Driving licence, PAN, passport</p>
+      <span class="status available"><i class="fas fa-check"></i> Available Now ✅</span>
+    </div>
+    <div class="service-card">
+      <h3>🆔 PAN Card Guide</h3>
+      <p>New application / correction</p>
+      <span class="status coming"><i class="far fa-hourglass"></i> Coming Soon ⏳</span>
+    </div>
+    <div class="service-card">
+      <h3>💼 Job Application Help</h3>
+      <p>Govt. form assistance</p>
+      <span class="status coming"><i class="far fa-hourglass"></i> Updating Soon ⏳</span>
+    </div>
+  </div>
+  <p style="margin-top: 8px; color: #3a7386;"><i class="fas fa-sync-alt"></i> More services are being added regularly.</p>
+
+  <!-- MAIN CONTENT: Aadhaar Update Guide (step by step) -->
+  <h2>📌 How to Update Aadhaar Card (Step by Step)</h2>
+  <div class="guide-step">
+    <div style="margin-bottom: 20px; background: #e1f0ea; padding: 8px 20px; border-radius: 50px; display: inline-block;">
+      <i class="far fa-calendar-alt"></i> Last updated: 13 April 2026
+    </div>
+    
+    <h3>✅ Steps (via myAadhaar portal)</h3>
+    <div class="step-item"><strong>1. Visit the official UIDAI website:</strong> myaadhaar.uidai.gov.in (link in official cards above).</div>
+    <div class="step-item"><strong>2. Select 'Update Aadhaar' section:</strong> Click on "Update Demographics Data & Check Status".</div>
+    <div class="step-item"><strong>3. Enter Aadhaar number & captcha:</strong> OTP will be sent to your registered mobile.</div>
+    <div class="step-item"><strong>4. Choose fields to update:</strong> Name, address, date of birth, mobile, email.</div>
+    <div class="step-item"><strong>5. Upload required documents (see list below):</strong> Pay ₹50 online (GST included).</div>
+    <div class="step-item"><strong>6. Note down the SRN (Service Request Number):</strong> Use it to track status.</div>
+    <div class="step-item"><strong>7. Update completes in 7–10 days:</strong> Download updated e‑Aadhaar.</div>
+  </div>
+
+  <h3>📑 Required Documents (PoI / PoA)</h3>
+  <ul class="doc-list">
+    <li>Identity proof: Voter ID, PAN card, Driving licence, Passport</li>
+    <li>Address proof: Electricity bill, water bill, bank passbook, ration card</li>
+    <li>Date of birth proof: 10th marksheet, birth certificate</li>
+    <li>For mobile update: No document needed, only biometric at enrolment centre.</li>
+  </ul>
+
+  <h3>⚠️ Common Problems & Solutions</h3>
+  <ul class="problem-list">
+    <li><strong>OTP not received?</strong> Ensure mobile number is linked with Aadhaar. Otherwise visit nearest Aadhaar centre.</li>
+    <li><strong>Document upload fails?</strong> File size under 2MB, format PDF/JPEG.</li>
+    <li><strong>Name spelling correction:</strong> More than two corrections may require centre visit.</li>
+    <li><strong>Track SRN:</strong> Use "Check Aadhaar Update Status" on UIDAI site.</li>
+  </ul>
+  
+  <div style="margin: 24px 0 8px;">
+    <span class="update-date"><i class="far fa-check-circle"></i> This information is based on official UIDAI guidelines.</span>
+  </div>
+
+  <!-- Working Tools -->
+  <hr>
+  <h2>🛠️ Useful Tools (Working)</h2>
+  
+  <!-- Eligibility Checker -->
+  <div class="tool-box">
+    <h3 style="margin-top: 0;">🔍 Eligibility Checker (Scholarship / Pension)</h3>
+    <p style="margin-bottom: 18px;">Enter your age and monthly income — see which scheme you may qualify for.</p>
+    <div class="inline-flex">
+      <input type="number" id="ageInput" placeholder="Age (years)" min="15" max="100" style="max-width:170px;">
+      <input type="number" id="incomeInput" placeholder="Monthly income (₹)" min="0" style="max-width:200px;">
+      <button id="checkEligibilityBtn"><i class="fas fa-search"></i> Check</button>
+    </div>
+    <div id="eligibilityResult" style="margin-top: 22px; background: white; padding: 16px 20px; border-radius: 24px; font-weight: 500;"></div>
+  </div>
+  
+  <!-- Document Checklist tool -->
+  <div class="tool-box">
+    <h3 style="margin-top: 0;">📋 Document Checklist (Ready to save/print)</h3>
+    <label for="serviceSelect">Select service:</label>
+    <select id="serviceSelect" style="margin: 12px 0 18px; max-width: 300px;">
+      <option value="dl">🚗 Driving Licence</option>
+      <option value="pan">🆔 PAN Card (New)</option>
+      <option value="aadharUpdate">📇 Aadhaar Update</option>
+      <option value="passport">🛂 Passport</option>
+    </select>
+    <button id="showChecklistBtn">📄 Show Checklist</button>
+    <div id="checklistResult" style="margin-top: 22px; background: white; border-radius: 24px; padding: 18px;"></div>
+    <p style="margin-top: 16px; font-size:0.95rem;"><i class="far fa-file-pdf"></i> You can download or print this list.</p>
+  </div>
+
+  <!-- Local Office Locator (Map) -->
+  <h2>📍 Aadhaar Enrolment / CSC Locator</h2>
+  <div class="map-container">
+    <iframe title="Aadhaar Seva Kendra example" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.857465982857!2d77.2312343150833!3d28.614459982416285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa5e5f5f5%3A0x6e3c7b3d5c5e1a0!2sAadhaar%20Seva%20Kendra!5e0!3m2!1sen!2sin!4v1712345678901" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <p style="font-size:0.95rem; margin-bottom: 28px;"><i class="fas fa-map-pin"></i> Example: Aadhaar Seva Kendra, Delhi. For nearest centre, visit UIDAI locator.</p>
+
+  <!-- FAQ Section -->
+  <h2>❓ Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-question">📌 What is the fee for Aadhaar update?</div>
+    <div>Online demographic update (name/address etc.) costs ₹50 (incl. GST). Biometric update at centre may be ₹100.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">📌 Can mobile number be updated online?</div>
+    <div>No, mobile number update requires biometric verification at an Aadhaar centre.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">📌 How to check Aadhaar update status?</div>
+    <div>Go to myaadhaar.uidai.gov.in and use "Check Aadhaar Update Status" with SRN.</div>
+  </div>
+
+  <!-- Important Links (additional official) -->
+  <h2>🔗 More Official Resources</h2>
+  <div class="important-links">
+    <a href="https://uidai.gov.in/" target="_blank" rel="noopener">UIDAI (Aadhaar) <i class="fas fa-external-link-alt"></i></a>
+    <a href="https://www.onlineservices.nsdl.com/" target="_blank" rel="noopener">NSDL PAN <i class="fas fa-external-link-alt"></i></a>
+    <a href="https://nrega.nic.in/" target="_blank" rel="noopener">NREGA Job Card <i class="fas fa-external-link-alt"></i></a>
+    <a href="https://www.incometax.gov.in/" target="_blank" rel="noopener">Income Tax India</a>
+    <a href="https://parivahan.gov.in/" target="_blank" rel="noopener">Parivahan (DL)</a>
+    <a href="https://www.passportindia.gov.in/" target="_blank" rel="noopener">Passport Seva</a>
+  </div>
+
+  <!-- WhatsApp contact & trust -->
+  <div style="margin: 36px 0 12px;">
+    <a href="https://wa.me/919876543210?text=Hello,%20I%20need%20help%20with%20Aadhaar%20update%20or%20other%20services." target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+    </a>
+    <p style="margin-top: 14px; color: #3f6e80;"><i class="far fa-comment-dots"></i> For personal assistance, message us on WhatsApp — we respond quickly.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><i class="fas fa-tools"></i> Work in progress — new features coming soon.</p>
+    <p>📢 We are continuously improving this platform.</p>
+    <p style="margin-top: 18px; opacity: 0.8;">© 2026 Helper Guide · Clean, honest, reliable</p>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // Eligibility checker (English)
+    const ageInput = document.getElementById('ageInput');
+    const incomeInput = document.getElementById('incomeInput');
+    const checkBtn = document.getElementById('checkEligibilityBtn');
+    const resultDiv = document.getElementById('eligibilityResult');
+
+    function checkEligibility() {
+      const age = parseInt(ageInput.value);
+      const income = parseFloat(incomeInput.value);
+      if (isNaN(age) || age < 15 || age > 100) {
+        resultDiv.innerHTML = '<span style="color:#b34e4e;">Please enter a valid age (15–100).</span>';
+        return;
+      }
+      let message = '';
+      if (age >= 18 && age <= 25) {
+        if (!isNaN(income) && income < 15000) {
+          message = '🎓 You may be eligible for "National Scholarship Scheme" (income criteria).';
+        } else {
+          message = '🎓 You fall in the scholarship age range. Check income proof for specific schemes.';
+        }
+      } else if (age >= 60) {
+        message = '🧓 You may be eligible for "Old Age Pension Scheme" (IGNOAPS). BPL category applies.';
+      } else if (age >= 18 && age < 60) {
+        message = '📋 Explore skill development schemes or PMEGP. Visit official portal for details.';
+      } else {
+        message = 'Please contact nearest CSC for accurate eligibility.';
+      }
+      if (!isNaN(income) && income > 25000 && age < 60) {
+        message += ' Higher income may limit some scheme eligibility.';
+      }
+      resultDiv.innerHTML = '✅ ' + message;
+    }
+    checkBtn.addEventListener('click', checkEligibility);
+
+    // Document checklist (English)
+    const serviceSelect = document.getElementById('serviceSelect');
+    const showChecklistBtn = document.getElementById('showChecklistBtn');
+    const checklistDiv = document.getElementById('checklistResult');
+
+    const checklistData = {
+      dl: ['✅ Identity proof (Voter ID/PAN/Passport)', '✅ Address proof (utility bill/ration card)', '✅ Age proof (10th marksheet)', '✅ Form 1 (self declaration)', '✅ Passport size photo (if required)'],
+      pan: ['✅ Identity proof (Aadhaar/Voter ID)', '✅ Address proof', '✅ Date of birth proof', '✅ Form 49A (online)', '✅ Photo (captured online)'],
+      aadharUpdate: ['✅ Proof of Identity (PoI)', '✅ Proof of Address (PoA)', '✅ Date of birth proof (if updating)', '✅ Registered mobile number'],
+      passport: ['✅ Identity proof', '✅ Address proof', '✅ Birth certificate', '✅ 10th/12th marksheet (for ECR)', '✅ Police verification form']
+    };
+
+    showChecklistBtn.addEventListener('click', function() {
+      const selected = serviceSelect.value;
+      const items = checklistData[selected] || checklistData.dl;
+      let html = '<ul style="list-style:none; padding-left:0;">';
+      items.forEach(item => { html += `<li style="padding:8px 0;">📌 ${item}</li>`; });
+      html += '</ul><p style="margin-top:16px;"><i class="far fa-print"></i> Ready to print or save.</p>';
+      checklistDiv.innerHTML = html;
+    });
+
+    // Prefill for demo
+    window.addEventListener('DOMContentLoaded', function() {
+      showChecklistBtn.click();
+      ageInput.value = '32';
+      incomeInput.value = '18000';
+    });
+  })();
+</script>
+
+<!-- additional select styling -->
+<style>
+  select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    appearance: none;
+    -webkit-appearance: none;
+    background-size: 14px;
+  }
+  .tool-box select, .tool-box input {
+    background-color: white;
+  }
+  .official-card a i {
+    transition: transform 0.1s;
+  }
+  .official-card a:hover i {
+    transform: translateX(2px);
+  }
+</style>
+</body>
+</html>
