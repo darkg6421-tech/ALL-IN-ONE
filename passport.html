@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passport Guide · Helper Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:system-ui, sans-serif; background:#f5fafc; color:#1a2e3b; padding:20px; transition:0.2s; }
+    body.dark { background:#121f26; color:#e2ecf2; }
+    .container { max-width:1100px; margin:0 auto; background:white; border-radius:28px; padding:24px 28px 32px; border:1px solid #dde9f0; }
+    body.dark .container { background:#1b2e38; border-color:#2b4552; }
+    nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-bottom:15px; padding-bottom:12px; border-bottom:2px solid #d1e3ec; }
+    .logo { font-size:1.8rem; font-weight:700; color:#0a4b5e; }
+    .nav-links { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .nav-links a { text-decoration:none; font-weight:550; color:#1a5f72; padding:8px 14px; border-radius:40px; background:#ecf5f9; }
+    body.dark .nav-links a { background: #1e4454; color: #d6ecf5; }
+    .dropdown { position:relative; display:inline-block; }
+    .dropbtn { background:#ecf5f9; padding:8px 14px; border-radius:40px; cursor:pointer; }
+    body.dark .dropbtn { background:#1e4454; color:#d6ecf5; }
+    .dropdown-content { display:none; position:absolute; background:white; min-width:200px; box-shadow:0 8px 16px rgba(0,0,0,0.1); border-radius:16px; z-index:10; margin-top:8px; border:1px solid #dde9f0; }
+    body.dark .dropdown-content { background:#1b2e38; border-color:#2b4552; }
+    .dropdown-content a { color:#1a2e3b; padding:12px 16px; text-decoration:none; display:block; border-radius:0; background:transparent !important; }
+    body.dark .dropdown-content a { color:#e2ecf2; }
+    .dropdown-content a:hover { background:#f0f7fa; }
+    body.dark .dropdown-content a:hover { background:#203a45; }
+    .dropdown:hover .dropdown-content { display:block; }
+    .nav-controls { display:flex; gap:8px; }
+    .lang-toggle, .dark-toggle { background:#e2ecf2; border:none; border-radius:40px; padding:6px 12px; cursor:pointer; }
+    .breadcrumb { margin:10px 0 20px; color:#3d6a7c; }
+    .breadcrumb a { color:#1a5f72; text-decoration:none; }
+    h2 { font-size:1.8rem; color:#1d4e5f; border-left:6px solid #2a8b7a; padding-left:18px; margin:20px 0; }
+    .guide-step { background:#fafdff; padding:22px 20px; border-radius:22px; margin:24px 0; border:1px solid #d7e6f0; }
+    body.dark .guide-step { background:#1d3641; border-color:#2e5363; }
+    .step-item { margin-bottom:18px; padding-left:32px; position:relative; }
+    .step-item:before { content:"✓"; position:absolute; left:0; color:#1e7e6c; font-weight:bold; font-size:1.4rem; }
+    .doc-list { list-style:none; padding-left:6px; }
+    .doc-list li { padding:10px 0 10px 32px; position:relative; border-bottom:1px dashed #cbdae3; }
+    .doc-list li:before { content:"📄"; position:absolute; left:0; color:#3b7387; }
+    .update-date { background:#eef4f8; padding:8px 18px; border-radius:40px; display:inline-block; margin:20px 0; }
+    .btn-group { display:flex; gap:12px; flex-wrap:wrap; margin:20px 0; }
+    .btn { background:#1f6e5c; color:white; border:none; padding:10px 22px; border-radius:50px; font-weight:600; cursor:pointer; }
+    .btn-outline { background:transparent; border:1.5px solid #1a5f72; color:#1a5f72; }
+    body.dark .btn-outline { color:#d4eaf3; border-color:#6da5b9; }
+    .footer { margin-top:40px; padding-top:24px; border-top:2px solid #d5e4ed; text-align:center; color:#3d6a7c; }
+    .footer a { color:#1a5f72; text-decoration:none; margin:0 6px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav>
+    <div class="logo"><i class="fas fa-compass"></i> Helper Guide</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Services <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="aadhaar-guide.html">📇 Aadhaar Update</a>
+          <a href="pan-guide.html">🆔 PAN Card</a>
+          <a href="driving-licence.html">🚗 Driving Licence</a>
+          <a href="passport.html">🛂 Passport</a>
+          <a href="voter-id.html">🗳️ Voter ID</a>
+        </div>
+      </div>
+      <a href="tools.html">Tools</a>
+      <a href="official-links.html">Official Links</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button class="lang-toggle" id="langToggle">हिंदी</button>
+      <button class="dark-toggle" id="darkToggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+  <div class="breadcrumb"><a href="index.html">Home</a> &gt; <span>Passport</span></div>
+
+  <h2 data-en="🛂 Passport – Fresh & Renewal Guide" data-hi="🛂 पासपोर्ट – नया और नवीनीकरण गाइड">🛂 Passport – Fresh & Renewal Guide</h2>
+  <div><span class="update-date"><i class="far fa-calendar-alt"></i> <span data-en="Last updated: 13 April 2026" data-hi="अंतिम अपडेट: 13 अप्रैल 2026">Last updated: 13 April 2026</span></span></div>
+  
+  <div class="guide-step">
+    <h3 data-en="✅ Steps for Fresh Passport" data-hi="✅ नया पासपोर्ट के स्टेप्स">✅ Steps for Fresh Passport</h3>
+    <div class="step-item"><span data-en="1. Register on Passport Seva:" data-hi="1. पासपोर्ट सेवा पर रजिस्टर करें:">1. Register on Passport Seva:</span> passportindia.gov.in</div>
+    <div class="step-item"><span data-en="2. Fill application form online." data-hi="2. ऑनलाइन आवेदन फॉर्म भरें।">2. Fill application form online.</span></div>
+    <div class="step-item"><span data-en="3. Pay fee and schedule appointment." data-hi="3. शुल्क भुगतान करें और अपॉइंटमेंट लें।">3. Pay fee and schedule appointment.</span></div>
+    <div class="step-item"><span data-en="4. Visit PSK with original documents." data-hi="4. मूल दस्तावेजों के साथ PSK जाएं।">4. Visit PSK with original documents.</span></div>
+    <div class="step-item"><span data-en="5. Police verification." data-hi="5. पुलिस सत्यापन।">5. Police verification.</span></div>
+    <div class="step-item"><span data-en="6. Passport dispatched." data-hi="6. पासपोर्ट डिस्पैच।">6. Passport dispatched.</span></div>
+  </div>
+
+  <h3 data-en="📑 Required Documents" data-hi="📑 आवश्यक दस्तावेज़">📑 Required Documents</h3>
+  <ul class="doc-list">
+    <li data-en="Identity: Aadhaar, Voter ID, PAN, DL" data-hi="पहचान: आधार, वोटर आईडी, पैन, डीएल">Identity: Aadhaar, Voter ID, PAN, DL</li>
+    <li data-en="Address: Utility bill, Bank passbook" data-hi="पता: बिजली बिल, बैंक पासबुक">Address: Utility bill, Bank passbook</li>
+    <li data-en="DoB: 10th marksheet, Birth certificate" data-hi="जन्मतिथि: 10वीं मार्कशीट, जन्म प्रमाण पत्र">DoB: 10th marksheet, Birth certificate</li>
+    <li data-en="Passport size photos (as per specs)" data-hi="पासपोर्ट साइज फोटो (निर्धारित)">Passport size photos (as per specs)</li>
+  </ul>
+
+  <div class="btn-group">
+    <button class="btn" id="printGuideBtn"><i class="fas fa-print"></i> <span data-en="Print" data-hi="प्रिंट">Print</span></button>
+    <button class="btn" id="pdfDownloadBtn"><i class="fas fa-file-pdf"></i> <span data-en="PDF" data-hi="पीडीएफ">PDF</span></button>
+    <button class="btn btn-outline" id="voiceGuideBtn"><i class="fas fa-volume-up"></i> <span data-en="Listen" data-hi="सुनें">Listen</span></button>
+    <button class="btn btn-outline" id="shareGuideBtn"><i class="fas fa-share-alt"></i> <span data-en="Share" data-hi="शेयर">Share</span></button>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Helper Guide · Created & Maintained by <strong>Kunal Singh Foujdar</strong></p>
+    <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="contact.html">Contact</a></p>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  (function(){
+    const body=document.body, dt=document.getElementById('darkToggle');
+    if(localStorage.getItem('theme')==='dark'){ body.classList.add('dark'); dt.innerHTML='<i class="fas fa-sun"></i>'; }
+    dt.addEventListener('click',()=>{ body.classList.toggle('dark'); let d=body.classList.contains('dark'); dt.innerHTML=d?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>'; localStorage.setItem('theme',d?'dark':'light'); });
+    let lang='en'; const lt=document.getElementById('langToggle');
+    function setLang(l){ document.querySelectorAll('[data-en][data-hi]').forEach(el=>el.textContent=el.getAttribute(`data-${l}`)); lt.textContent = l==='en'?'हिंदी':'English'; lang=l; localStorage.setItem('lang',l); }
+    lt.addEventListener('click',()=>setLang(lang==='en'?'hi':'en')); setLang(localStorage.getItem('lang')||'en');
+    document.getElementById('printGuideBtn').addEventListener('click',()=>window.print());
+    document.getElementById('pdfDownloadBtn').addEventListener('click',()=>{ const { jsPDF } = window.jspdf; const doc = new jsPDF(); doc.text(document.querySelector('.guide-step').innerText,10,10,{maxWidth:180}); doc.save('Passport_Guide.pdf'); });
+    document.getElementById('voiceGuideBtn').addEventListener('click',()=>{ const msg=new SpeechSynthesisUtterance(document.querySelector('.guide-step').innerText); window.speechSynthesis.speak(msg); });
+    document.getElementById('shareGuideBtn').addEventListener('click',()=>{ if(navigator.share) navigator.share({title:'Passport Guide', url:window.location.href}); else alert('Share: '+window.location.href); });
+  })();
+</script>
+</body>
+</html>
