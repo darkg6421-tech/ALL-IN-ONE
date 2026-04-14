@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAN Card · Helper Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Same core variables and styles as aadhaar-guide.html (abbreviated for brevity) */
+    :root { --primary: #0a4b5e; --primary-light: #1a5f72; --accent: #2a8b7a; --bg-light: #f5fafc; --card-bg: #ffffff; --text-dark: #1a2e3b; --border-light: #dde9f0; }
+    body.dark { --bg-light: #121f26; --card-bg: #1b2e38; --text-dark: #e2ecf2; --border-light: #2b4552; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg-light); color: var(--text-dark); padding:20px; transition:0.2s; }
+    .container { max-width:1200px; margin:0 auto; background: var(--card-bg); border-radius:32px; padding:24px 32px 32px; box-shadow:0 8px 20px rgba(0,0,0,0.03); border:1px solid var(--border-light); }
+    nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-bottom:20px; padding-bottom:16px; border-bottom:2px solid var(--border-light); }
+    .logo { font-size:1.9rem; font-weight:700; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .nav-links { display:flex; gap:8px; flex-wrap:wrap; }
+    .nav-links a { text-decoration:none; font-weight:550; color: var(--primary-light); padding:10px 18px; border-radius:40px; background:#ecf5f9; }
+    body.dark .nav-links a { background:#1e4454; color:#d6ecf5; }
+    .nav-links a:hover, .nav-links a.active { background:var(--primary); color:white; }
+    .dropdown { position:relative; } .dropbtn { background:#ecf5f9; padding:10px 18px; border-radius:40px; cursor:pointer; } body.dark .dropbtn { background:#1e4454; }
+    .dropdown-content { display:none; position:absolute; background:var(--card-bg); min-width:220px; box-shadow:0 12px 28px rgba(0,0,0,0.08); border-radius:20px; z-index:20; margin-top:10px; border:1px solid var(--border-light); }
+    .dropdown-content a { color:var(--text-dark); padding:14px 20px; display:block; } .dropdown:hover .dropdown-content { display:block; }
+    .nav-controls { display:flex; gap:8px; } .lang-toggle, .dark-toggle { background:#e2ecf2; border:none; border-radius:40px; padding:8px 16px; cursor:pointer; }
+    .breadcrumb { margin:10px 0 20px; } h2 { font-size:2rem; color:var(--primary); border-left:6px solid var(--accent); padding-left:20px; }
+    .guide-step { background:#fafdff; padding:28px; border-radius:24px; margin:24px 0; border:1px solid var(--border-light); } body.dark .guide-step { background:#1d3641; }
+    .step-item { margin-bottom:18px; padding-left:36px; position:relative; } .step-item:before { content:"✓"; position:absolute; left:0; color:var(--accent); font-size:1.5rem; }
+    .doc-list { list-style:none; } .doc-list li { padding:12px 0 12px 36px; border-bottom:1px dashed var(--border-light); } .doc-list li:before { content:"📄"; position:absolute; left:0; }
+    .btn-group { display:flex; gap:14px; flex-wrap:wrap; margin:30px 0; } .btn { background:var(--primary); color:white; border:none; padding:12px 28px; border-radius:60px; cursor:pointer; } .btn-outline { background:transparent; border:1.5px solid var(--primary-light); color:var(--primary-light); }
+    .footer { margin-top:48px; padding-top:28px; border-top:2px solid var(--border-light); text-align:center; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav>
+    <div class="logo"><i class="fas fa-compass"></i> Helper Guide</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="aadhaar-guide.html">📇 Aadhaar</a><a href="pan-guide.html">🆔 PAN</a><a href="driving-licence.html">🚗 DL</a><a href="passport.html">🛂 Passport</a><a href="voter-id.html">🗳️ Voter ID</a>
+        </div>
+      </div>
+      <a href="tools.html">Tools</a><a href="official-links.html">Official Links</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button class="lang-toggle" id="langToggle">हिंदी</button>
+      <button class="dark-toggle" id="darkToggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+  <div class="breadcrumb"><a href="index.html">Home</a> &gt; PAN Guide</div>
+  <h2 data-en="🆔 PAN Card – Apply & Update" data-hi="🆔 पैन कार्ड – आवेदन और अपडेट">🆔 PAN Card – Apply & Update</h2>
+  <div><span class="update-date"><i class="far fa-calendar-alt"></i> <span data-en="Last updated: 14 April 2026" data-hi="अंतिम अपडेट: 14 अप्रैल 2026">Last updated: 14 April 2026</span></span></div>
+  <div class="guide-step">
+    <h3 data-en="✅ Steps for New PAN" data-hi="✅ नया पैन के स्टेप्स">✅ Steps for New PAN</h3>
+    <div class="step-item"><span data-en="1. NSDL portal:" data-hi="1. NSDL पोर्टल:">1. NSDL portal:</span> onlineservices.nsdl.com</div>
+    <div class="step-item"><span data-en="2. Select 'Application for New PAN'." data-hi="2. 'नए पैन के लिए आवेदन' चुनें।">2. Select 'Application for New PAN'.</span></div>
+    <div class="step-item"><span data-en="3. Fill Form 49A." data-hi="3. फॉर्म 49A भरें।">3. Fill Form 49A.</span></div>
+    <div class="step-item"><span data-en="4. Upload documents." data-hi="4. दस्तावेज़ अपलोड करें।">4. Upload documents.</span></div>
+    <div class="step-item"><span data-en="5. Pay ₹107 fee." data-hi="5. ₹107 शुल्क भुगतान करें।">5. Pay ₹107 fee.</span></div>
+    <div class="step-item"><span data-en="6. Note Acknowledgement No." data-hi="6. Acknowledgement No. नोट करें।">6. Note Acknowledgement No.</span></div>
+    <div class="step-item"><span data-en="7. PAN delivered in 15-20 days." data-hi="7. पैन 15-20 दिनों में डिलीवर।">7. PAN delivered in 15-20 days.</span></div>
+  </div>
+  <h3 data-en="📑 Required Documents" data-hi="📑 आवश्यक दस्तावेज़">📑 Required Documents</h3>
+  <ul class="doc-list">
+    <li data-en="Identity: Aadhaar, Voter ID, DL, Passport" data-hi="पहचान: आधार, वोटर आईडी, डीएल, पासपोर्ट">Identity: Aadhaar, Voter ID, DL, Passport</li>
+    <li data-en="Address: Utility bill, Bank statement" data-hi="पता: बिजली बिल, बैंक स्टेटमेंट">Address: Utility bill, Bank statement</li>
+    <li data-en="DoB: 10th marksheet" data-hi="जन्मतिथि: 10वीं मार्कशीट">DoB: 10th marksheet</li>
+  </ul>
+  <div class="btn-group">
+    <button class="btn" id="printGuideBtn"><i class="fas fa-print"></i> Print</button>
+    <button class="btn" id="pdfDownloadBtn"><i class="fas fa-file-pdf"></i> PDF</button>
+    <button class="btn btn-outline" id="voiceGuideBtn"><i class="fas fa-volume-up"></i> Listen</button>
+    <button class="btn btn-outline" id="shareGuideBtn"><i class="fas fa-share-alt"></i> Share</button>
+  </div>
+  <div class="footer">
+    <p>© 2026 Helper Guide · Created & Maintained by <strong>Tanmay Foujdar</strong></p>
+    <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="contact.html">Contact</a></p>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  // Same script as aadhaar (dark/lang + actions)
+  (function(){
+    const body=document.body, dt=document.getElementById('darkToggle');
+    if(localStorage.getItem('theme')==='dark'){ body.classList.add('dark'); dt.innerHTML='<i class="fas fa-sun"></i>'; }
+    dt.addEventListener('click',()=>{ body.classList.toggle('dark'); let d=body.classList.contains('dark'); dt.innerHTML=d?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>'; localStorage.setItem('theme',d?'dark':'light'); });
+    let lang='en'; const lt=document.getElementById('langToggle');
+    function setLang(l){ document.querySelectorAll('[data-en][data-hi]').forEach(el=>el.textContent=el.getAttribute(`data-${l}`)); lt.textContent = l==='en'?'हिंदी':'English'; lang=l; localStorage.setItem('lang',l); }
+    lt.addEventListener('click',()=>setLang(lang==='en'?'hi':'en')); setLang(localStorage.getItem('lang')||'en');
+    document.getElementById('printGuideBtn').addEventListener('click',()=>window.print());
+    document.getElementById('pdfDownloadBtn').addEventListener('click',()=>{ const { jsPDF } = window.jspdf; const doc = new jsPDF(); doc.text(document.querySelector('.guide-step').innerText,10,10,{maxWidth:180}); doc.save('PAN_Guide.pdf'); });
+    document.getElementById('voiceGuideBtn').addEventListener('click',()=>{ const msg=new SpeechSynthesisUtterance(document.querySelector('.guide-step').innerText); window.speechSynthesis.speak(msg); });
+    document.getElementById('shareGuideBtn').addEventListener('click',()=>{ if(navigator.share) navigator.share({title:'PAN Guide', url:window.location.href}); else alert('Share: '+window.location.href); });
+  })();
+</script>
+</body>
+</html>
